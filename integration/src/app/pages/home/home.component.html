@@ -1,0 +1,26 @@
+<div class="container w-full">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Início</h1>
+    </div>
+  </div>
+</div>
+
+<div class="main flex flex-column align-items-center gap-2">
+  <form action="#" class="w-20rem">
+    <div class="field">
+      <label for="msg">Insira uma mensagem</label>
+      <input type="text" id="msg" pInputText [(ngModel)]="value" [ngModelOptions]="{standalone: true}" class="w-full {{!isValidValue ? 'ng-dirty ng-invalid' : ''}}" />
+    </div>
+    <div class="flex justify-content-around">
+      <p-button label="Abrir Modal" (click)="sendMessage()"></p-button>
+      <p-button label="Fechar Modal" (click)="closePrescriptionIframe()"></p-button>
+    </div>
+  </form>
+  <div class="meg">{{msg}}</div>
+  <div *ngIf="showPrescriptionIframe" class="row w-full mt-4">
+    <div class="col-md-12 border-2 border-100">
+      <iframe src="http://localhost:63326/prescricao" class="w-full h-20rem" frameborder="0"></iframe>
+    </div>
+  </div>
+</div>
