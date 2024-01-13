@@ -8,13 +8,13 @@ import { TabMenuModule } from 'primeng/tabmenu';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-    TabMenuModule
+    TabMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

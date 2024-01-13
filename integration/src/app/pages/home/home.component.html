@@ -19,8 +19,6 @@
   </form>
   <div class="meg">{{msg}}</div>
   <div *ngIf="showPrescriptionIframe" class="row w-full mt-4">
-    <div class="col-md-12 border-2 border-100">
-      <iframe src="http://localhost:63326/prescricao" class="w-full h-20rem" frameborder="0"></iframe>
-    </div>
+    <div class="col-md-12 border-2 border-100" id="divIframe"></div>
   </div>
 </div>

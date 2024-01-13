@@ -28,9 +28,16 @@ export class IntegrationMessagesService {
   }
 
   postMessage(message: string) {
-    this.iframe = window.open('http://localhost:63326/prescricao', '_blank');
+    this.iframe = window.open('http://localhost:57516/prescricao', '_blank');
 
     this.iframe.postMessage(message, '*');
+
+    console.log('iframe: ' + this.iframe);
+  }
+
+  enviarMensagem() {
+    var mensagem = "Olá, Janela 2!";
+    window.opener.postMessage(mensagem, '*');
   }
 
   destroyEventListener() {
